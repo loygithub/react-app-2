@@ -1,21 +1,23 @@
 import React from 'react';
-import { Router, Route, Switch } from 'react-router-dom';
+import { Router, Route, Switch, Redirect } from 'react-router-dom';
 
 import CharacterList from './characters/CharacterList';
-import CharacterDetail from './characters/CharacterDetail';
+import CharacterDetails from './characters/CharacterDetails';
 
 import history from '../history';
+import Header from './Header';
 
 class App extends React.Component {
     render() {
         return (
             <div className="container">
+                <Header />
                 <Router history={history}>
                     <div>
-                        <Header />
                         <Switch>
+                            <Redirect exact from="/" to="/people" />
                             <Route path="/people" exact component={CharacterList} />
-                            <Route path="/people/:id" exact component={CharacterDetail} />
+                            <Route path="/people/:id" exact component={CharacterDetails} />
                         </Switch>
                     </div>
                 </Router>

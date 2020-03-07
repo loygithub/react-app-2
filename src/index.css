@@ -5,9 +5,41 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #151515;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.characterContainer {
+  background-color: black;
+  padding: 10px;
+  text-align: center;
+  color: #999999;
+  cursor: pointer;
+}
+
+.characterContainer:hover {
+  color: white;
+  background: #2b2a2a;
+}
+
+.header-container {
+  min-height: 105px;
+  margin-top: 10px;
+}
+
+.header {
+    display: block;
+    top: 50%;
+    width: 100%;
+    max-width: 203px;
+    height: 88px;
+    max-height: 88px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    background-image: url(https://static-mh.content.disney.io/starwars/assets/navigation/sw_logo_stacked-336c62367939.png);
+    background-size: contain;
 }
